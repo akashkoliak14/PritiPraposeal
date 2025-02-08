@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff00cb, rgb(250, 150, 255), rgb(135, 106, 251));
+            display: flex;     
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Heart Animation Styles */
+        .heart {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            font-size: 50px;
+            animation: floatHearts 10s infinite;
+            opacity: 0.6;
+        }
+
+        .heart:nth-child(odd) {
+            animation-duration: 8s;
+            opacity: 0.8;
+        }
+
+        @keyframes floatHearts {
+            0% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-300px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+        }
+
+        /* Container for the Proposal */
+        .container {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #e60000;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Image Container - Centering the image */
+        .image-container {
+            display: flex;
+            justify-content: center; /* This centers the content inside */
+            align-items: center; /* This vertically aligns the content */
+            margin: 20px 0;
+            border-radius: 50%;
+            overflow: hidden;
+            max-height: 300px;
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-left: auto; /* Center horizontally */
+            margin-right: auto; /* Center horizontally */
+        }
+
+        .image-container img {
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .button {
+            background-color: #e60000;
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 14px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .button:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+
+        /* Floating Hearts Effect */
+        .heart-container {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="heart-container">
+            <!-- Floating Hearts -->
+            <div class="heart">❤️</div>
+            <div class="heart">💖</div>
+            <div class="heart">💘</div>
+            <div class="heart">💝</div>
+            <div class="heart">💞</div>
+        </div>
+    
+        <div class="container">
+            <h1>Thank You </h1>
+            <p class="message">
+          This is the real Way to prapose <br/>"सॉफ्टवेअर डेव्हलपरने आपल्या भविष्यातील पत्नीला योग्य पद्धतीने प्रपोज करण्याची खरी पद्धत."
+            </p>
+            
+            <!-- Custom Image (Change to your personal image URL) -->
+            <div class="image-container">
+                <img src="./Images/1.jpeg" alt="Priti">
+            </div>
+    
+        </div>
+    </section>
+
+</body>
+</html>
